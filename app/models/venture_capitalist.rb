@@ -1,16 +1,18 @@
 require "pry"
 
 class VentureCapitalist
-attr_accessor :name 
+attr_accessor :name, :total_worth
 
 @@all = []
 
-def initialize
+def initialize(name, total_worth)
+  @name = name
+  @total_worth = total_worth
   @@all << self 
 end 
 
-def total_worth #come back and add all investments (Int) 
-
+def total_worth
+  @total_worth
 end
 
 def self.all
